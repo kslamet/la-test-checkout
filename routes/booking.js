@@ -3,7 +3,7 @@ const router = express.Router();
 
 const PACKAGES = {
   10: { name: 'Starter Pack', lessons: 10, displayPrice: 'USD 1,599', ibpAvailable: true,  achAvailable: false },
-  50: { name: 'Pro Pack',     lessons: 50, displayPrice: 'USD 5,999', ibpAvailable: false, achAvailable: true  },
+  70: { name: 'Pro Pack',     lessons: 70, displayPrice: 'USD 7,999', ibpAvailable: false, achAvailable: true  },
 };
 
 router.get('/', (req, res) => {
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.get('/payment', (req, res) => {
   const pkg = PACKAGES[req.query.package] || PACKAGES[10];
-  const packageKey = req.query.package === '50' ? '50' : '10';
+  const packageKey = req.query.package === '70' ? '70' : '10';
   res.render('payment', {
     title: 'Select Payment',
     activePage: 'book-class',

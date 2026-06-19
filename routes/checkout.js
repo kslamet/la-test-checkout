@@ -16,13 +16,13 @@ const PACKAGES = {
     perLesson: 'USD 159.90 / lesson',
     currency: 'usd',
   },
-  50: {
+  70: {
     name: 'Pro Pack',
-    description: '50 Mandarin lessons with certified teachers',
-    lessons: 50,
-    unitAmount: 599900,         // USD 5,999.00
-    displayPrice: 'USD 5,999.00',
-    perLesson: 'USD 119.98 / lesson — save 25%',
+    description: '70 Mandarin lessons with certified teachers',
+    lessons: 70,
+    unitAmount: 799900,         // USD 7,999.00
+    displayPrice: 'USD 7,999.00',
+    perLesson: 'USD 114.27 / lesson — save 29%',
     currency: 'usd',
   },
 };
