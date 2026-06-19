@@ -1,4 +1,4 @@
-# LingoAce Checkout Demo
+# LA Checkout Demo
 
 A demo app showcasing Stripe's Payment Element integrated into a LA-style class booking flow. Built with Node.js, Express, and EJS.
 
@@ -25,7 +25,7 @@ A demo app showcasing Stripe's Payment Element integrated into a LA-style class 
 
 ```bash
 git clone <your-repo-url>
-cd LingoAce
+cd la-test-checkout
 npm install
 ```
 
