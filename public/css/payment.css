@@ -1,0 +1,205 @@
+/* ── Payment page layout ── */
+.payment-page-layout {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+/* ── Package summary strip ── */
+.payment-pkg-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.payment-pkg-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-pkg-brand {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+
+.payment-pkg-detail {
+  margin-left: auto;
+  text-align: right;
+}
+
+.payment-pkg-name {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.payment-pkg-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+/* ── Payment card ── */
+.payment-card {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.payment-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+/* ── Radio list ── */
+.pm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.pm-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.pm-option:hover:not(.pm-option--disabled) {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-muted);
+}
+
+.pm-option input[type="radio"] {
+  display: none;
+}
+
+.pm-option input[type="radio"]:checked ~ .pm-radio {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.pm-option input[type="radio"]:checked ~ .pm-radio ~ * {
+  /* checked state cascade doesn't reach label text — handled via JS class below */
+}
+
+.pm-option:has(input:checked) {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+/* Custom radio dot */
+.pm-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+/* Icon slot */
+.pm-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.pm-icon--cards {
+  gap: 3px;
+}
+
+.pm-ach-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  background: var(--color-border);
+  border-radius: 4px;
+  padding: 2px 5px;
+  letter-spacing: 0.5px;
+}
+
+/* Label text */
+.pm-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pm-surcharge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #E07010;
+}
+
+.pm-note {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* ── Disabled option (IBP for Pro Pack) ── */
+.pm-option--disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.pm-unavailable {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* ── Next button ── */
+.btn-next {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: var(--color-warning);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.1s;
+}
+
+.btn-next:hover:not(:disabled) {
+  background: #E09820;
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-next:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-next:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}

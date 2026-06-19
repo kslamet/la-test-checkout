@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LingoAce – <%= title %></title>
+  <link rel="stylesheet" href="/css/base.css"/>
+  <link rel="stylesheet" href="/css/layout.css"/>
+  <link rel="stylesheet" href="/css/home.css"/>
+</head>
+<body>
+  <%- include('partials/topbar') %>
+  <%- include('partials/navbar') %>
+
+  <div class="page-shell">
+    <%- include('partials/sidebar') %>
+
+    <main class="main-content">
+      <!-- Banner -->
+      <div class="home-banner">
+        <div class="banner-text">
+          <p class="banner-label">Let's read together</p>
+          <h2 class="banner-heading">Written for young Chinese<br/>Language Learners</h2>
+        </div>
+        <div class="banner-cta">
+          <a href="#" class="btn-banner">Get our FREE book club for kids</a>
+        </div>
+        <div class="banner-mascots">
+          <svg width="100" height="90" viewBox="0 0 100 90">
+            <ellipse cx="50" cy="75" rx="30" ry="8" fill="rgba(107,94,205,0.15)"/>
+            <rect x="20" y="30" width="60" height="42" rx="8" fill="#fff" stroke="#6B5ECD" stroke-width="2"/>
+            <rect x="28" y="38" width="44" height="6" rx="3" fill="#EEF0FF"/>
+            <rect x="28" y="50" width="30" height="5" rx="2.5" fill="#EEF0FF"/>
+            <circle cx="72" cy="20" r="14" fill="#F5A623"/>
+            <circle cx="68" cy="17" r="2.5" fill="#fff"/>
+            <circle cx="76" cy="17" r="2.5" fill="#fff"/>
+            <circle cx="68" cy="17" r="1.2" fill="#333"/>
+            <circle cx="76" cy="17" r="1.2" fill="#333"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B5ECD" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label">With LingoAce</p>
+            <p class="stat-value">66<span class="stat-unit">th day</span></p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label">Completed</p>
+            <p class="stat-value">0 <span class="stat-unit">Classes</span></p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--orange">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label">Upcoming</p>
+            <p class="stat-value">0 <span class="stat-unit">Classes</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome message -->
+      <div class="welcome-card">
+        <p class="welcome-title">Welcome Jim!</p>
+        <p class="welcome-body">Please tell us about yourself so we can find the best courses and teachers for you.</p>
+        <a href="#" class="btn-primary">Complete your profile</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

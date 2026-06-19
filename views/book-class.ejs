@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LingoAce – <%= title %></title>
+  <link rel="stylesheet" href="/css/base.css"/>
+  <link rel="stylesheet" href="/css/layout.css"/>
+  <link rel="stylesheet" href="/css/book-class.css"/>
+  <link rel="stylesheet" href="/css/payment.css"/>
+</head>
+<body>
+  <%- include('partials/topbar') %>
+  <%- include('partials/navbar') %>
+
+  <div class="page-shell">
+    <%- include('partials/sidebar') %>
+
+    <main class="main-content">
+      <div class="book-class-empty">
+        <!-- Empty state illustration -->
+        <div class="empty-illustration">
+          <svg width="180" height="160" viewBox="0 0 180 160" fill="none">
+            <!-- sparkles -->
+            <circle cx="30" cy="40" r="3" fill="#C5BFEF"/>
+            <circle cx="150" cy="50" r="4" fill="#C5BFEF"/>
+            <circle cx="140" cy="110" r="3" fill="#C5BFEF"/>
+            <circle cx="45" cy="115" r="2.5" fill="#C5BFEF"/>
+            <!-- star top-left -->
+            <path d="M55 25 l2 6 6 0 -5 4 2 6 -5-3-5 3 2-6-5-4 6 0z" fill="#C5BFEF"/>
+            <!-- star top-right -->
+            <path d="M128 18 l1.5 4.5 4.5 0 -3.6 2.8 1.4 4.5 -3.8-2.3-3.8 2.3 1.4-4.5-3.6-2.8 4.5 0z" fill="#C5BFEF"/>
+            <!-- envelope body -->
+            <rect x="40" y="55" width="100" height="72" rx="10" fill="#DDD8F8"/>
+            <!-- envelope flap lines -->
+            <path d="M40 65 l50 32 50-32" stroke="#C5BFEF" stroke-width="2" fill="none"/>
+            <!-- small character -->
+            <circle cx="90" cy="108" r="14" fill="#C5BFEF"/>
+            <circle cx="86" cy="105" r="2" fill="#9B8FE0"/>
+            <circle cx="94" cy="105" r="2" fill="#9B8FE0"/>
+            <path d="M87 112 q3 2 6 0" stroke="#9B8FE0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <rect x="84" y="122" width="12" height="10" rx="3" fill="#C5BFEF"/>
+            <rect x="80" y="130" width="8" height="6" rx="2" fill="#C5BFEF"/>
+            <rect x="92" y="130" width="8" height="6" rx="2" fill="#C5BFEF"/>
+          </svg>
+        </div>
+
+        <h2 class="empty-heading">No class package yet</h2>
+        <p class="empty-subtext">Purchase a class package to start booking your Mandarin lessons with certified teachers.</p>
+
+        <div class="packages-row">
+          <!-- 10-lesson package -->
+          <div class="package-card">
+            <div class="package-info">
+              <span class="package-badge">Most Popular</span>
+              <h3 class="package-name">Starter Pack</h3>
+              <p class="package-desc">10 Mandarin lessons · Certified teachers · Flexible scheduling</p>
+              <p class="package-price">USD 1,599</p>
+              <p class="package-per">USD 159.90 / lesson</p>
+            </div>
+            <a href="/book-class/payment?package=10" class="btn-primary btn-buy">
+              Select
+            </a>
+          </div>
+
+          <!-- 50-lesson package -->
+          <div class="package-card package-card--featured">
+            <div class="package-info">
+              <span class="package-badge package-badge--gold">Best Value</span>
+              <h3 class="package-name">Pro Pack</h3>
+              <p class="package-desc">50 Mandarin lessons · Certified teachers · Flexible scheduling</p>
+              <p class="package-price">USD 5,999</p>
+              <p class="package-per">USD 119.98 / lesson — save 25%</p>
+            </div>
+            <a href="/book-class/payment?package=50" class="btn-primary btn-buy btn-buy--gold">
+              Select
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LingoAce – Book Class</title>
+  <link rel="stylesheet" href="/css/base.css"/>
+  <link rel="stylesheet" href="/css/layout.css"/>
+  <link rel="stylesheet" href="/css/book-class.css"/>
+  <link rel="stylesheet" href="/css/calendar.css"/>
+</head>
+<body>
+  <%- include('partials/topbar') %>
+  <%- include('partials/navbar') %>
+
+  <div class="page-shell">
+    <%- include('partials/sidebar') %>
+
+    <main class="main-content">
+      <div class="confirmed-header">
+        <div class="confirmed-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34C759" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Payment successful — your class package is active!
+        </div>
+      </div>
+
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button class="cal-nav" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <h2 class="cal-month-title">June 2026</h2>
+          <button class="cal-nav" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="cal-day-label">Sun</div>
+          <div class="cal-day-label">Mon</div>
+          <div class="cal-day-label">Tue</div>
+          <div class="cal-day-label">Wed</div>
+          <div class="cal-day-label">Thu</div>
+          <div class="cal-day-label">Fri</div>
+          <div class="cal-day-label">Sat</div>
+
+          <!-- June 2026 starts on Monday (offset 1) -->
+          <div class="cal-cell cal-empty"></div>
+          <% for (let d = 1; d <= 30; d++) { %>
+            <div class="cal-cell">
+              <span class="cal-date"><%= d %></span>
+            </div>
+          <% } %>
+          <!-- fill remaining cells to complete the 5-week grid: 1 offset + 30 days = 31, need 35 total -->
+          <% for (let p = 0; p < 4; p++) { %>
+            <div class="cal-cell cal-empty cal-overflow"></div>
+          <% } %>
+        </div>
+
+        <div class="calendar-empty-notice">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B5ECD" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          No classes scheduled yet — book your first lesson to get started.
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
